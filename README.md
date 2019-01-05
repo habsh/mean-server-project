@@ -1,1 +1,1 @@
-# mean-server-project
+# mean-server-project codebase
