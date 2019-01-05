@@ -10,16 +10,9 @@ router.get('/', function (req, res, next) {
   });
 });
 
-router.get('/viewLeave', function (req, res, next) {
-  var id = 3;
-  //var query = Employee.findById(id);
-  // Employee.find({ empId: id }, function (err, doc) {
-  //   if (err) return res.status(500).json({ error: err });
-  //   else {
-  //     console.log(doc);
-  //     return res.status(200).json(doc);
-  //   }
-  // });
+router.get('/viewLeave/:id', function (req, res, next) {
+  var id = req.params["id"];
+  
   Employee.findOne({ empId: id }).exec(function (err, doc) {
     if (err) return res.status(500).json({ error: err });
     else {console.log(doc)
