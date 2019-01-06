@@ -1,0 +1,37 @@
+use leaveManagement;
+
+db.employees.insert({
+ "empId":db.employees.find().count()+1,
+ "empName":"John Doe",
+ "empPhone": "1234567890",
+ "empDept":"Sales",
+ "empEmail":"emp1@gmaiol.com",
+ "empDoj": new Date(),
+ "leaveBalance": 0,
+ "empManagerId":3,
+ "appliedLeaves":[]
+});
+
+db.employees.insert({
+ "empId":db.employees.find().count()+1,
+ "empName":"James",
+ "empPhone": "1234567890",
+ "empDept":"Marketting",
+ "empEmail":"james@gmaiol.com",
+ "empDoj": new Date(),
+ "leaveBalance": 0,
+ "empManagerId":2,
+"appliedLeaves":[]
+});
+
+db.employees.insert({
+ "empId":db.employees.find().count()+1,
+ "empName":"Tom",
+ "empPhone": "1234567890",
+ "empDept":"Marketting",
+ "empEmail":"tom@gmaiol.com",
+ "empDoj": new Date(),
+ "leaveBalance": 2,
+ "empManagerId":3,
+"appliedLeaves":[]
+});
