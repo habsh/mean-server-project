@@ -26,7 +26,8 @@ app.all('*',function(req,res,next)
 });
 
 // Mongoose connection to MongoDB (ted/ted is readonly)
-mongoose.connect('mongodb://localhost:27017/leaveManagement', function (error) {
+// database name need to be updated
+mongoose.connect('mongodb://localhost:27017/test', function (error) {
     if (error) {
         console.log(error);
     }
